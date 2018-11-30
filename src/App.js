@@ -18,25 +18,25 @@ class App extends Component {
       banner: 'hello',
       isOpen: false,
     };
-    this.buttonHandler = this.buttonHandler.bind(this);
-    this.textHandler = this.textHandler.bind(this);
+    // this.buttonHandler = this.buttonHandler.bind(this);
+    // this.textHandler = this.textHandler.bind(this);
     console.log(this.props)
   }
 
-  buttonHandler() {
+  buttonHandler = () => {
     this.setState({
       isOpen: !this.state.isOpen,
     });
   }
 
-  textHandler(e) {
+  textHandler = (e) => {
     this.setState({
       banner: e.target.value,
     })
   }
 
   render() {
-    let myVariable = <h2>Brian</h2>;
+    let myVariable = <h2>Marlon</h2>;
     let myBanner;
     if (this.state.isOpen) {
       myBanner = <Header banner={this.state.banner} />;
